@@ -1,12 +1,12 @@
 /**
  * Created by schoeu on 2014/3/31.
  * 兼容IE8+ 及其他浏览器
- * doc: http:
+ * doc: https://github.com/schoeu/sLazyLoad
  */
 
 void function(window,sLazyLoad){
 
-    if(window.define && define.amd){
+    if(typeof window.define === "function" && define.amd){
         define(sLazyLoad);
     }else{
         !window.sLazyLoad && (window.sLazyLoad = sLazyLoad(window,window.document));
@@ -88,7 +88,6 @@ void function(window,sLazyLoad){
         },
 
         //class工具方法 为了兼容IE89,安卓2.3
-
         _addClass:(function(){
             var div = document.createElement("div");
             if(div.classList){
@@ -149,5 +148,4 @@ void function(window,sLazyLoad){
     }
 
     return sLazyLoad;
-
 });

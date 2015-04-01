@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <style type="text/css" rel="stylesheet">
+        .cube1{
+            height: 1400px;
+            background-color: #ace;
+        }
+        .cube2{
+            height: 100px;
+            background-color: #ffe2d6;
+        }
+    </style>
+    <title>sLazyLoad test</title>
+</head>
+<body>
+    <div class="cube1"></div>
+    <div class="cube2"></div>
+
+    <img src="" alt="../image/2.png" />
+    <img src="" alt="../image/3.png"/>
+
+    <div class="cube2"></div>
+
+    <img src="" alt="../image/4.png"/>
+
+    <div class="cube2"></div>
+
+    <img src="" alt="../image/5.png"/>
+
+<script type="text/javascript" src="../src/sLazyLoad.js"></script>
+<script type="text/javascript" >
+
+    sLazyLoad("body img");
+
+</script>
+</body>
+</html>

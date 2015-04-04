@@ -65,10 +65,10 @@ void function(window,sLazyLoad){
     var fixT = {
         //IE7+ document.body.clientHeight为文档高度，IE7+之前为窗口高度
         winH : (function(win,doc){
-            if(window.innerHeight){
-                return window.innerHeight;
+            if(win.innerHeight){
+                return win.innerHeight;
             }else{
-                return document.documentElement.clientHeight;
+                return doc.documentElement.clientHeight;
             }
         })(win,doc),
 
@@ -89,7 +89,7 @@ void function(window,sLazyLoad){
 
         //class工具方法 为了兼容IE89,安卓2.3
         _addClass:(function(){
-            var div = document.createElement("div");
+            var div = doc.createElement("div");
             if(div.classList){
                 return function(el,cls){
                     if(el){
@@ -108,7 +108,7 @@ void function(window,sLazyLoad){
         })(),
 
         _removeClass:(function(){
-            var div = document.createElement("div");
+            var div = doc.createElement("div");
             if(div.classList){
                 return function(el,cls){
                     if(el) {
@@ -127,7 +127,7 @@ void function(window,sLazyLoad){
         })(),
 
         _hasClass:(function(){
-            var div = document.createElement("div");
+            var div = doc.createElement("div");
             if(div.classList){
                 return function(el,cls){
                     if(el) {
